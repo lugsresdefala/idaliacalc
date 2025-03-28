@@ -1,0 +1,113 @@
+{
+  "theme": {
+    "colors": {
+      "primary": {
+        "DEFAULT": "#d53f8c",
+        "foreground": "#fdf2f8"
+      },
+      "secondary": {
+        "DEFAULT": "#e9e9ee",
+        "foreground": "#1a1a1f"
+      },
+      "accent": {
+        "DEFAULT": "#f5f5f6",
+        "foreground": "#1a1a1f"
+      },
+      "destructive": {
+        "DEFAULT": "#ef4444",
+        "foreground": "#fef2f2"
+      },
+      "muted": {
+        "DEFAULT": "#f5f5f6",
+        "foreground": "#71717a"
+      },
+      "background": "#ffffff",
+      "foreground": "#0a0a0f",
+      "border": "#e5e5e9",
+      "input": "#e5e5e9",
+      "ring": "#d53f8c"
+    },
+    "borderRadius": {
+      "large": "0.75rem",
+      "medium": "0.5rem",
+      "small": "0.25rem"
+    },
+    "fontFamily": {
+      "sans": "Roboto, system-ui, sans-serif",
+      "heading": "Roboto, system-ui, sans-serif",
+      "mono": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace"
+    },
+    "spacing": {
+      "content": {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px"
+      },
+      "gutter": {
+        "xs": "0.5rem",
+        "sm": "1rem",
+        "md": "1.5rem",
+        "lg": "2rem",
+        "xl": "3rem"
+      }
+    },
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+    }
+  },
+  "variants": {
+    "primary": {
+      "solid": {
+        "background": "#d53f8c",
+        "foreground": "#ffffff",
+        "hover": {
+          "background": "#c22e7b"
+        }
+      },
+      "outline": {
+        "background": "transparent",
+        "foreground": "#d53f8c",
+        "border": "#d53f8c",
+        "hover": {
+          "background": "#fdf2f8"
+        }
+      },
+      "ghost": {
+        "background": "transparent",
+        "foreground": "#d53f8c",
+        "hover": {
+          "background": "#fdf2f8"
+        }
+      }
+    },
+    "secondary": {
+      "solid": {
+        "background": "#e9e9ee",
+        "foreground": "#1a1a1f",
+        "hover": {
+          "background": "#d9d9df"
+        }
+      },
+      "outline": {
+        "background": "transparent",
+        "foreground": "#71717a",
+        "border": "#d9d9df",
+        "hover": {
+          "background": "#f5f5f6"
+        }
+      },
+      "ghost": {
+        "background": "transparent",
+        "foreground": "#71717a",
+        "hover": {
+          "background": "#f5f5f6"
+        }
+      }
+    }
+  }
+}

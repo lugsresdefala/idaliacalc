@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 315 67% 51%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346.8 77.2% 49.8%;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-gradient-to-br from-white/70 via-white/50 to-white/30
+           backdrop-blur-2xl border border-white/60
+           shadow-[0_12px_45px_-10px_rgba(0,0,0,0.25)]
+           hover:shadow-[0_22px_65px_-12px_rgba(0,0,0,0.35)]
+           hover:border-white/80
+           transition-shadow transition-border-color duration-500;
+  }
+  
+  .glass-card {
+    @apply rounded-3xl glass 
+           hover:from-white/80 hover:via-white/60 hover:to-white/40
+           transition-shadow transition-border-color duration-500
+           hover:rotate-[0.5deg]
+           animate-card-float;
+  }
+
+  .parallax {
+    @apply transition-transform transition-shadow duration-500 ease-out
+           hover:translate-y-[-12px] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]
+           hover:rotate-[1deg];
+  }
+
+  .gradient-bg {
+    @apply relative
+           bg-[length:400%_400%]
+           bg-gradient-to-br from-blue-200/80 via-purple-100/70 to-pink-200/80
+           animate-gradient-shimmer;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-white/40 via-purple-100/30 to-pink-200/40
+           min-h-screen;
+  }
+}
+
+@keyframes card-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes gradient-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer utilities {
+  .animate-card-float {
+    animation: card-float 3s ease-in-out infinite;
+  }
+
+  .animate-gradient-shimmer {
+    animation: gradient-shimmer 8s ease infinite;
+  }
+}
